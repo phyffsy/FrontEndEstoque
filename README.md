@@ -1,124 +1,120 @@
-# 📦 Sistema de Controle de Estoque
+# 📦 FrontEndEstoque
 
-Sistema desenvolvido para gerenciamento de estoque de produtos, permitindo o cadastro, consulta, atualização e remoção de itens de forma simples e eficiente.
+Sistema web desenvolvido para gerenciamento de estoque de produtos, oferecendo uma interface moderna e intuitiva para controle, consulta e organização dos itens armazenados.
 
 ## 🎯 Objetivo
 
-Facilitar o controle de produtos armazenados, garantindo organização, rastreabilidade e praticidade no gerenciamento do estoque.
+Fornecer uma aplicação simples e eficiente para auxiliar no gerenciamento de produtos e estoque, facilitando o controle das informações por meio de uma interface amigável.
 
-## 🚀 Funcionalidades
+## ✨ Funcionalidades
 
 ### Produtos
-- Cadastrar produtos
-- Listar produtos
-- Buscar produto por ID
-- Atualizar informações de produtos
+- Visualizar lista de produtos
+- Cadastrar novos produtos
+- Editar informações dos produtos
 - Excluir produtos
+- Buscar produtos por ID
 
 ### Estoque
-- Registrar entradas e saídas
-- Controlar quantidade disponível
+- Visualizar estoque disponível
+- Cadastrar registros de estoque
+- Atualizar quantidades
 - Consultar localização dos produtos
-- Visualizar informações do estoque
+- Excluir registros de estoque
 
-### Sistema
-- Integração com banco de dados MySQL
-- API REST para comunicação com o Front-end
-- Persistência de dados utilizando Spring Data JPA
-- Validação de dados
+### Interface
+- Navegação intuitiva
+- Formulários responsivos
+- Comunicação com API REST
+- Atualização dinâmica dos dados
 
-## 🛠 Tecnologias Utilizadas
+## 🚀 Tecnologias Utilizadas
 
-### Back-end
-- Java 21
-- Spring Boot
-- Spring Data JPA
-- Maven
+### Front-end
+- Next.js
+- React
+- TypeScript
+- CSS3
 
-### Banco de Dados
-- MySQL
+### Comunicação
+- Axios
+- API REST
 
 ### Ferramentas
-- Docker
-- Postman
 - Git
 - GitHub
+- VS Code
 
 ## 📂 Estrutura do Projeto
 
 ```text
 src
- ├── controller
- ├── service
- ├── repository
- ├── model
- ├── dto
- └── config
+ ├── app
+ ├── components
+ ├── hooks
+ ├── services
+ ├── types
+ └── styles
 ```
 
-## ⚙️ Configuração
+## ⚙️ Instalação
 
 ### Clonar o projeto
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/phyffsy/FrontEndEstoque.git
 ```
 
-### Configurar o banco de dados
+### Entrar na pasta
 
-Edite o arquivo:
-
-```properties
-application.properties
+```bash
+cd FrontEndEstoque
 ```
 
-Exemplo:
+### Instalar dependências
 
-```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/estoque
-spring.datasource.username=root
-spring.datasource.password=senha
-
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
+```bash
+npm install
 ```
 
 ### Executar o projeto
 
 ```bash
-mvn spring-boot:run
+npm run dev
 ```
 
-Ou:
+A aplicação estará disponível em:
 
-```bash
-./mvnw spring-boot:run
+```text
+http://localhost:3000
 ```
 
-## 🔗 Endpoints Principais
+## 🔗 Integração
 
-### Produtos
+O sistema consome uma API desenvolvida em Spring Boot para gerenciamento dos dados de produtos e estoque.
 
-| Método | Endpoint |
-|----------|----------|
-| GET | /produtos |
-| GET | /produtos/{id} |
-| POST | /produtos |
-| PUT | /produtos/{id} |
-| DELETE | /produtos/{id} |
+### Funcionalidades Integradas
 
-### Estoque
+- Cadastro de produtos
+- Consulta de produtos
+- Atualização de estoque
+- Exclusão de registros
+- Persistência de dados em banco MySQL
 
-| Método | Endpoint |
-|----------|----------|
-| GET | /estoque |
-| GET | /estoque/{id} |
-| POST | /estoque |
-| PUT | /estoque/{id} |
-| DELETE | /estoque/{id} |
+## 📱 Responsividade
+
+A interface foi desenvolvida para funcionar em diferentes dispositivos:
+
+- Computadores
+- Tablets
+- Smartphones
 
 ## 👨‍💻 Desenvolvedor
 
-**Pietro Siqueira**
+### Pietro Siqueira
 
-Estudante de Desenvolvimento de Sistemas pelo SENAI, com foco em desenvolvimento Full Stack, APIs REST, Java, Spring Boot, React e Next.js.
+Estudante de Desenvolvimento de Sistemas pelo SENAI, com foco em desenvolvimento Full Stack utilizando Java, Spring Boot, React, Next.js, TypeScript e MySQL.
+
+## 📄 Licença
+
+Projeto desenvolvido para fins acadêmicos e de aprendizado.
