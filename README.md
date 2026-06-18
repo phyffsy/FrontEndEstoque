@@ -1,36 +1,124 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📦 Sistema de Controle de Estoque
 
-## Getting Started
+Sistema desenvolvido para gerenciamento de estoque de produtos, permitindo o cadastro, consulta, atualização e remoção de itens de forma simples e eficiente.
 
-First, run the development server:
+## 🎯 Objetivo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Facilitar o controle de produtos armazenados, garantindo organização, rastreabilidade e praticidade no gerenciamento do estoque.
+
+## 🚀 Funcionalidades
+
+### Produtos
+- Cadastrar produtos
+- Listar produtos
+- Buscar produto por ID
+- Atualizar informações de produtos
+- Excluir produtos
+
+### Estoque
+- Registrar entradas e saídas
+- Controlar quantidade disponível
+- Consultar localização dos produtos
+- Visualizar informações do estoque
+
+### Sistema
+- Integração com banco de dados MySQL
+- API REST para comunicação com o Front-end
+- Persistência de dados utilizando Spring Data JPA
+- Validação de dados
+
+## 🛠 Tecnologias Utilizadas
+
+### Back-end
+- Java 21
+- Spring Boot
+- Spring Data JPA
+- Maven
+
+### Banco de Dados
+- MySQL
+
+### Ferramentas
+- Docker
+- Postman
+- Git
+- GitHub
+
+## 📂 Estrutura do Projeto
+
+```text
+src
+ ├── controller
+ ├── service
+ ├── repository
+ ├── model
+ ├── dto
+ └── config
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚙️ Configuração
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Clonar o projeto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+git clone https://github.com/seu-usuario/seu-repositorio.git
+```
 
-## Learn More
+### Configurar o banco de dados
 
-To learn more about Next.js, take a look at the following resources:
+Edite o arquivo:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```properties
+application.properties
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Exemplo:
 
-## Deploy on Vercel
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/estoque
+spring.datasource.username=root
+spring.datasource.password=senha
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Executar o projeto
+
+```bash
+mvn spring-boot:run
+```
+
+Ou:
+
+```bash
+./mvnw spring-boot:run
+```
+
+## 🔗 Endpoints Principais
+
+### Produtos
+
+| Método | Endpoint |
+|----------|----------|
+| GET | /produtos |
+| GET | /produtos/{id} |
+| POST | /produtos |
+| PUT | /produtos/{id} |
+| DELETE | /produtos/{id} |
+
+### Estoque
+
+| Método | Endpoint |
+|----------|----------|
+| GET | /estoque |
+| GET | /estoque/{id} |
+| POST | /estoque |
+| PUT | /estoque/{id} |
+| DELETE | /estoque/{id} |
+
+## 👨‍💻 Desenvolvedor
+
+**Pietro Siqueira**
+
+Estudante de Desenvolvimento de Sistemas pelo SENAI, com foco em desenvolvimento Full Stack, APIs REST, Java, Spring Boot, React e Next.js.
